@@ -1,8 +1,14 @@
 import exifread
 
-f = open('C:\\Users\\Kyle\\Box\\BIDC Main\\BIDC_Personal Folders\\Kyle\\Research\\TestData\\MIBI\\FOV1_MassCorrected_Filtered_summed_image.tiff', 'rb')
+#f = open('C:\\Users\\Kyle\\Box\\BIDC Main\\BIDC_Personal Folders\\Kyle\\Research\\TestData\\MIBI\\FOV1_MassCorrected_Filtered_summed_image.tiff', 'rb')
 
+tiff_name = 'C:\\Users\\Kyle\\Box\\BIDC Main\\BIDC_Personal Folders\\Kyle\\Research\\TestData\\MIBI\\' \
+            'FOV1_MassCorrected_Filtered_summed_image.tiff'
+
+f = open(tiff_name, 'rb')
 tags = exifread.process_file(f)
+
+
 
 
 for tag in tags.keys():
